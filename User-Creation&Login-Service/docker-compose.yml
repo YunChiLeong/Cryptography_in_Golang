@@ -1,0 +1,17 @@
+services:
+
+  web:
+    build: ./app-service
+    ports:
+      - "8080:8080"
+    environment:
+      - DB_CONN=user=${POSTGRES_USER} password=${POSTGRES_PASSWORD} host=db port=5432 dbname=${POSTGRES_DB}
+    restart: always
+
+  db:
+    build: ./db
+    environment:
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - POSTGRES_DB
+    restart: always

@@ -1,0 +1,23 @@
+POST http://localhost:8080/signup
+{
+    "username": "yunchi",
+    "password": "correctpassword"
+}
+
+POST http://localhost:8080/login
+{
+    "username": "yunchi",
+    "password": "correctpassword"
+}
+
+POST http://localhost:8080/login
+{
+    "username": "sam"
+    "password": "noUser"
+}
+
+POST http://localhost:8080/login
+{
+    "username":"yunchi"
+    "password":"incorrectpassword"
+}
